@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <script>
+        function vc() {
+            var d = parseFloat(document.getElementById("d").value);
+            var n = parseFloat(document.getElementById("n").value);
+            var f = parseFloat(document.getElementById("f").value);
+            var v = (5*d)/(n*f);
+            document.getElementById("v").value = v.toFixed(3);
+        }
+        function fn() {
+            var l = parseFloat(document.getElementById("l").value);
+            var t = parseFloat(document.getElementById("t").value);
+            
+            var j = l / t
+            document.getElementById("j").value = j.toFixed(3);
+        }
+    </script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .vc {
+            width: 350px;
+            height: 300px;
+            border: 5px solid #a7bbc7;
+            background-color:#e1e5ea;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 30px;
+            box-shadow: 10px 5px #1e4621;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .vc h2 {
+            text-align: center;
+            color: #1900f8;
+        }
+        .vc input {
+            background-color: #FFF5EE;
+        }
+        .vc label {
+            color: #1900f8;
+        }
+        .vc sp {
+            color: #1900f8;
+        }
+        .fn {
+            width: 400px;
+            height: 250px;
+            border: 5px solid #a7bbc7;
+            background-color:#e1e5ea;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 30px;
+            box-shadow: 10px 5px #1e4621;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .fn input {
+            background-color: #FFF5EE;
+        }
+        .fn h2 {
+            text-align: center;
+            color: #1900f8;
+        }
+        .fn label {
+            color: #1900f8;
+        }
+        .fn sp {
+            color: #1900f8;
+        }
+        .h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #1900f8;
+            text-align: center;
+            text-shadow: 3px 3px #ffcc00;
+        }
+        .img {
+            width: 515px;
+            height:210px;
+            margin: 25px 20px 20px 35%;
+            border: 10px double #a7bbc7;
+            background-color: #a7bbc7;
+            box-shadow: 10px 5px #1e4621;
+        }
+    </style>
+</head>
+<body style="background-color: #d4f0f5">
+    <div class="h1">
+    <h1>PHY 104</h1>
+    </div>
+    <div class="container">
+        <div class="vc">
+            <h2>ค่าของตัวเก็บประจุ</h2>
+            <label for="d">กระเเสไฟฟ้าที่ออกจากเเหล่งจ่าย</label><br>
+            <input type="text" name="" id="d" size="30px"><sp>(A)</sp><br>
+            <label for="n">เเรงดันเเหล่งจ่าย</label><br>
+            <input type="text" name="" id="n" size="30px"><sp>(V)</sp><br>
+            <label for="f">ความถี่เเหล่งจ่ายเเหล่งจ่าย</label><br>
+            <input type="text" name="" id="f" size="30px"><sp>(Hz)</sp><br>
+            <button onclick="vc()">Enter</button><br>
+            <hr style="border: 2px solid #faf3f3;">
+            <label for="v">ค่าของตัวเก็บประจุ</label><br>
+            <input type="text" name="" id="v" size="30px"><sp>Q</sp>
+        </div>
+        <div class="fn">
+            <h2>ความหนาเเน่นของกระเเสไฟฟ้า</h2>
+            <label for="l">กระเเสไฟฟ้า</label><br>
+            <input type="text" name="" id="l" size="30px"><sp>(A)</sp><br>
+            <label for="t">พื้นที่หน้าตัด</label><br>
+            <input type="text" name="" id="t" size="30px"><sp>(m<sup>-2</sup>)</sp><br>
+            
+            <button onclick="fn()">Enter</button><br>
+            <hr style="border: 2px solid #faf3f3;">
+            <label for="j">ความหนาเเน่นของกระเเสไฟฟ้า</label><br>
+            <input type="text" name="" id="j" size="30px"><sp>(A.m<sup>-2</sup>)</sp>
+        </div>
+
+    </div>
+        <div class="img">
+            <img src="https://lh3.googleusercontent.com/proxy/SzByBhs8ShPmUao1G7zsoD1zOzfXolbUH88mp6wjZRbXCEJBL4Za9H3xxBUe3GH3hzIVsLVl4QHOp8vU0T4BlP_v4gpZ8ude_JJRZg1_L-WPctSLW5U_RopXQ2BsXK4CFCI">
+        </div>
+    
+</body>
+</html>

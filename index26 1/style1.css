@@ -1,0 +1,9 @@
+h1{color: red; text-align: left;
+}
+#id1{ 
+    color: goldenrod ; text-align: center;
+}
+#id2{background-color: indigo;font-size: 40px; }
+
+.cls{color: green; text-align: right;}
+*{color: midnightblue; background-color: orchid;}

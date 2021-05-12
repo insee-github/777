@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function basicCalculation(){
+    var n1 = parseFloat( document.getElementById("num1").value);
+    var n2 = parseFloat( document.getElementById("num2").value);
+    var res ; 
+    var operation = document.getElementById("operator").value
+
+
+if (operation === "+"){
+    res = n1 + n2;
+}
+if (operation === "-"){
+    res = n1 - n2
+}
+if (operation === "x"){
+    res = n1 * n2
+}
+if (operation === "/"){
+    res = n1 / n2
+}
+    
+    document.getElementById("result").value = res;
+}
+
+</script>
+<style>
+    *{
+        background-color: #91c788;
+    }
+.calculator{
+    width: 250px;
+    height: 200px;
+    border: 5px solid #52734d;
+    background-color: #feffde;
+    padding: 10px;
+    border-radius: 20px;
+}
+.calculator h4 {
+    text-align: center;
+    font-size: large;
+}
+.calculator input {
+    background-color: rgb(178, 179, 171);
+}
+.calculator button {
+    background-color: #ddffbc;
+}
+.calculator select{
+    background-color: lightslategray;
+}
+</style>
+<style>
+    .tempConversion{
+        width: 250px;
+    height: 200px;
+    border: 5px solid #52734d;
+    background-color: #feffde;
+    padding: 10px;
+    border-radius: 20px;
+    }
+</style>
+<script>
+    function c2f(){
+        let c = parseFloat(document.getElementById ("cel").value);
+        let f = c* 9/5 +32;
+        document.getElementById("fah").value = f.toFixed(2);
+    }
+    function f2c(){
+        let f = parseFloat(document.getElementById ("fah").value);
+        let c = (f-32)*5/9;
+        document.getElementById("cel").value = c.toFixed(2);
+    }
+    function c2k(){
+        let c = parseFloat(document.getElementById ("cel").value);
+        let k = c+273;
+        document.getElementById("kel").value = k.toFixed(2);
+    }
+</script>
+    
+</head>
+<body>
+<div class="container">
+    <!--BasicCalculation-->
+
+
+    <div class="calculator">
+    <h4>Basic Calculator</h4>
+    <label for="">Number1</label><br>
+    <input type="text" name="" id="num1" size="10">
+    <select name="" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <label for="">Number2</label><br>
+    <input type="text" name="" id="num2" size="10">
+<br>
+    <label for="">Result</label><br>
+    <input type="text" name="" id="result" size="10">
+    <button onclick="basicCalculation()">Enter</button>
+    </div>
+<!--TEmperature Conversion-->
+<div class="tempConversion">
+    <h4>Temperature Conversion</h4>
+    <label for="">Celcius(&#8451;)</label>
+    <input type="text" name="" id="cel" size="10">
+    <button onclick="c2f()">C2F</button><br><br>
+    
+    
+    <label for="">Fahrenheit(&#8457;)</label>
+    <input type="text" name="" id="fah" size="10">
+    <button onclick="f2c()">F2C</button>
+
+    <label for="">kevin(&#8457;)</label>
+    <input type="text" name="" id="kel" size="10">
+    <button onclick="c2k()">C2K</button>
+
+
+</div>
+
+</div>
+</body>
+</html>

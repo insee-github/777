@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .triarea{
+            width: 300px;
+            height: 350px;
+            border: 20px solid #ffaaa7;
+             border-radius: 10px;
+             background-color:#d5ecc2;
+             padding: 10px;
+             margin: auto;
+             
+             box-shadow: #000000;
+             text-align: center;
+
+        }
+    </style>
+ </head>
+<body style="background: #98ddca;">
+    <div class="triarea">
+        <h4 style="text-align: center;">Triangle Area</h4>
+        <img  src="le.gif" id="img" width="100"style="text-align: center;">
+        <hr> Base:<br>
+        <input type="text" name="" id="base" value="10">
+        <br> Height:<br>
+        <input type="text" name="" id="height" value="10">
+        <br>
+        <p id="result"></p>
+        <script>
+            let b = document.getElementById("base");
+            let h = document.getElementById("height");
+            let area =document.getElementById("result");
+            b.addEventListener("input",triArea);
+            h.addEventListener("input",triArea);
+            function triArea(){
+                let base = parseFloat(b.value);
+                let height = parseFloat(h.value);
+                area.innerHTML = `The triangle area is ${(0.5 * base * height).toFixed(2)}`
+            
+            }
+                
+            
+
+
+
+        </script>
+
+
+    </div>
+</body>
+</html>

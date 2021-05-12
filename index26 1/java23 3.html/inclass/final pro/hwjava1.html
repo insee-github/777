@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>การคำนวนหาค่าความเร็วตัดเเละความเร็วฟีด</title>
+     <script>
+       function Enter(){
+        let dc = parseFloat(document.getElementById ("num1").value);
+        let n = parseFloat(document.getElementById ("num2").value)
+        let vc = (dc*n*3.14)/1000;
+        document.getElementById("result").value = vc.toFixed(2);
+    }
+
+        
+</script>
+<script>
+    function Enter1(){
+     let vf = parseFloat(document.getElementById ("num11").value);
+     let z = parseFloat(document.getElementById ("num12").value);
+     let n = parseFloat(document.getElementById ("num13").value)
+     let fz = vf/(z*n);
+     document.getElementById("refz").value = fz.toFixed(2);
+ }
+
+     
+</script>
+     <style>
+         .calculator{
+    width: 250px;
+    height: 200px;
+    border: 5px solid #682c0e;
+    background-color: #fc8621;
+    padding: 10px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    
+}
+.calculator{
+    justify-content: center;
+    
+}
+.calculator h4 {
+    text-align: center;
+    font-size: large;
+}
+.calculator input {
+    background-color: rgb(178, 179, 171);
+}
+.calculator button {
+    background-color: crimson;
+}
+.calculator select{
+    background-color: lightslategray;
+}
+.jpg {
+    width: 250px;
+    height: 180px;
+    border: 5px solid #682c0e;
+    background-color: #fc8621;
+    padding: 10px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+     </style>
+     
+ </head>
+ <body style="background-color:#f9e0ae;">
+    <marquee direction ="right"><h5>นายอินทรี วิวัฒนานนท์ 63070504845 APE</h5></marquee>
+   <h1 style="text-align: center;">การคำนวนหาค่าความเร็วตัด</h1>
+   
+
+    <div class="calculator">
+        <h4>หาความเร็วตัด</h4>
+        <label for=""> Cutter Diameter DC(mm)</label>
+        <input type="text" name="dc" id="num1" size="10">
+           <br>
+            <label for="">Spindle Speed n(min<sup>-1</sup-1>)</label><br>
+            <input type="text" name="n" id="num2" size="10">
+        <br>
+            <label for="">Cutting Speed vc(m/min)</label><br>
+            <input type="text" name="vc" id="result" size="10">
+            <button onclick="Enter()">Enter</button>
+            </div>
+            <div class="jpg">
+            <img src="vci.jpg" alt="man not HOT" width="200" height="100">
+            <img src="vcim.jpg" alt="man not HOT" width="200" height="100">
+        </div>
+            <br>
+            <h1 style="text-align: center;">หาค่าความเร็วฟีด</h1>
+            <br>
+            <div class="calculator">
+                <h4>หาความเร็วฟีด</h4>
+                <label for="">Table Feed per Min vf(mm/min)</label>
+                <input type="text" name="vf" id="num11" size="10">
+                   <br>
+                    <label for="">Insert Number z</label><br>
+                    <input type="text" name="z" id="num12" size="10">
+                <br>
+                <label for="">Spindle Speed n(min<sup>-1</sup-1>)</label><br>
+                    <input type="text" name="n" id="num13" size="10">
+                <br>
+                    <label for="">Feed per Tooth fz(mm/t)</label><br>
+                    <input type="text" name="fz" id="refz" size="10">
+                    <button onclick="Enter1()">Enter</button>
+                    </div>
+                    <div class="jpg">
+                    <img src="fzi.jpg" alt="man not HOT" width="200" height="100">
+                    <img src="fzim.jpg" alt="man not HOT" width="200" height="100">
+                </div>
+            
+ </body>
+ </html>

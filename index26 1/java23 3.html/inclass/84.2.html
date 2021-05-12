@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: burlywood;
+            border: cornflowerblue;
+            text-align: center;
+        
+        }
+        
+        input{
+            border-radius: 5px;
+            background-color: rgb(30, 210, 39);
+            box-shadow: 5px 5px 5px rgb(120, 131, 163);
+            width: 50px;
+        }
+        button{
+            border-radius: 5px;
+            background-color: rgb(233, 12, 12);
+        }
+    </style>
+</head>
+<body>
+    
+    Radius: <br>
+
+    <div class="getinput">
+    <input type="text" name="" id="radius" value="10" >
+    <button onclick="showResult()">Click</button>
+    </div>
+
+    <div class="output">
+        <p id="show1"></p>
+        <input type="text" name="" id="show2">
+    </div>
+
+    <script>
+        function showResult() {
+            let rad = document.getElementById("radius").value;
+            document.getElementById("show1").innerHTML = 
+            "The circle area is " + cirArea(rad).toFixed(2);
+
+            document.getElementById("show2").value =
+            cirArea(rad).toFixed(2);
+
+        }
+        const cirArea = (rad) => {
+            return (Math.PI * rad ** 2);
+        }
+    </script>
+</body>
+</html>
